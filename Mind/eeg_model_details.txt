@@ -1,0 +1,5 @@
+EEG Model Details
+====================
+Model type: Pipeline
+Label mapping: {'IMAGINE_LEFT': 0, 'IMAGINE_RIGHT': 1, 'MENTAL_MATH': 2, 'REST': 3}
+Model parameters: {'memory': None, 'steps': [('standardscaler', StandardScaler()), ('svc', SVC(probability=True))], 'verbose': False, 'standardscaler': StandardScaler(), 'svc': SVC(probability=True), 'standardscaler__copy': True, 'standardscaler__with_mean': True, 'standardscaler__with_std': True, 'svc__C': 1.0, 'svc__break_ties': False, 'svc__cache_size': 200, 'svc__class_weight': None, 'svc__coef0': 0.0, 'svc__decision_function_shape': 'ovr', 'svc__degree': 3, 'svc__gamma': 'scale', 'svc__kernel': 'rbf', 'svc__max_iter': -1, 'svc__probability': True, 'svc__random_state': None, 'svc__shrinking': True, 'svc__tol': 0.001, 'svc__verbose': False}
