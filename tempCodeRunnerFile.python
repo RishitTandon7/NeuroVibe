@@ -1,0 +1,31 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+alpha_values = []
+beta_values = []
+
+plt.ion()
+fig, ax = plt.subplots()
+line1, = ax.plot([], [], label="Alpha Power (8–13 Hz)")
+line2, = ax.plot([], [], label="Beta Power (14–30 Hz)")
+ax.set_xlim(0, 50)
+ax.set_ylim(0, 2000)
+ax.legend()
+
+i = 0
+while True:
+    eeg = np.random.randn(128) * 30  # Replace with real EEG
+    alpha = np.mean(np.square(eeg[8:13]))
+    beta = np.mean(np.square(eeg[14:30]))
+
+    alpha_values.append(alpha)
+    beta_values.append(beta)
+
+    line1.set_xdata(range(len(alpha_values)))
+    line1.set_ydata(alpha_values)
+    line2.set_xdata(range(len(beta_values)))
+    line2.set_ydata(beta_values)
+
+    plt.draw()
+    plt.pause(0.1)
+    i += 1
